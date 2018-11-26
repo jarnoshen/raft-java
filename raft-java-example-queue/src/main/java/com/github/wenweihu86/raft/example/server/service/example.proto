@@ -1,0 +1,21 @@
+syntax="proto3";
+
+package service;
+option java_package = "com.github.wenweihu86.raft.example.server.service";
+option java_outer_classname = "ExampleMessage";
+
+message AppendRequest {
+	int32 id = 1;
+	string content = 2;
+}
+
+message AppendResponse {
+    bool success = 1;
+}
+
+message GetLastIdRequest {
+}
+
+message GetLastIdResponse {
+    int32 id = 1;
+}
